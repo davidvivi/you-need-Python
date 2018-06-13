@@ -37,8 +37,60 @@ for n in range(1, 31):
     time.sleep(random.randint(2, 5))
     # 提交数据
     html = requests.post(url, data=form_data, headers=header)
+
+    # {
+    #     "companyId": 61921,
+    #     "longitude": "39.897445",
+    #     "latitude": "116.331398",
+    #     "workYear": "3-5年",
+    #     "education": "本科",
+    #     "city": "北京",
+    #     "positionName": "python开发",
+    #     "companyLogo": "i/image/M00/04/01/CgqKkVbFXXqAPo0fAAATqvTo2-I592.png",
+    #     "score": 0,
+    #     "positionId": 4593934,
+    #     "companySize": "2000人以上",
+    #     "companyLabelList": ["年底双薪", "节日礼物", "绩效奖金", "岗位晋升"],
+    #     "publisherId": 10130242,
+    #     "district": "朝阳区",
+    #     "positionLables": [],
+    #     "industryLables": [],
+    #     "businessZones": null,
+    #     "companyShortName": "人人行(借贷宝)",
+    #     "createTime": "2018-06-13 08:58:47",
+    #     "positionAdvantage": "弹性工作,行业独角兽,发展空间大,福利待",
+    #     "salary": "15k-20k",
+    #     "financeStage": "C轮",
+    #     "industryField": "移动互联网,金融",
+    #     "jobNature": "全职",
+    #     "approve": 1,
+    #     "formatCreateTime": "08:58发布",
+    #     "hitags": null,
+    #     "resumeProcessRate": 12,
+    #     "resumeProcessDay": 1,
+    #     "imState": "today",
+    #     "lastLogin": 1528851521000,
+    #     "explain": null,
+    #     "plus": null,
+    #     "pcShow": 0,
+    #     "appShow": 0,
+    #     "deliver": 0,
+    #     "gradeDescription": null,
+    #     "promotionScoreExplain": null,
+    #     "firstType": "开发/测试/运维类",
+    #     "secondType": "后端开发",
+    #     "isSchoolJob": 0,
+    #     "subwayline": null,
+    #     "stationname": null,
+    #     "linestaion": null,
+    #     "companyFullName": "人人行科技有限公司",
+    #     "adWord": 0
+    # }
+
     # 提取数据
-    data = re.findall('{"companyId":.*?,"workYear":"(.*?)","education":"(.*?)","city":"(.*?)","positionName":"(.*?)","companyLogo":".*?","companyShortName":"(.*?)","positionLables":.*?,"industryLables":.*?,"businessZones":.*?,"score":.*?,"approve":.*?,"jobNature":".*?","companyLabelList":(.*?),"publisherId":.*?,"district":"(.*?)","companySize":".*?","createTime":".*?","positionAdvantage":".*?","salary":"(.*?)"}',html.text)
+    data = re.findall(
+        '"companyId":.*?,"workYear":"(.*?)","education":"(.*?)","city":"(.*?)","positionName":"(.*?)","companyLogo":.*?,"score":.*?,"companySize":".*?","companyLabelList":(.*?),"publisherId":.*?,"district":"(.*?)","positionLables":.*?,"industryLables":.*?,"businessZones":.*?,"companyShortName":"(.*?)","createTime":".*?","positionAdvantage":".*?","salary":"(.*?)","jobNature":".*?","approve":.*?',
+        html.text)
     data_frame = pd.DataFrame(data)
     data_frame.to_csv(os.path.abspath(os.path.dirname(__file__)) + '\\csv\\lagoujob.csv', header=False, index=False,
                       mode='a+')
