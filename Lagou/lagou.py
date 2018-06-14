@@ -4,10 +4,6 @@ import requests  # 网络请求
 import re
 import os
 import pandas as pd  # 数据框操作
-# import numpy as np
-# import matplotlib.pyplot as plt  # 绘图
-# import matplotlib as mpl  # 配置字体
-# from pyecharts import Geo  # 地理图
 import time  # 增加延时
 import random
 
