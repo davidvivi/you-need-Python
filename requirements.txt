@@ -1,1 +1,10 @@
 requests==2.18.4
+pandas==0.23.0
+matplotlib==2.2.2
+pyecharts==0.5.5
+jieba==0.39
+wordcloud==1.4.1
+echarts-countries-pypkg==0.1.4
+echarts-china-provinces-pypkg==0.0.2
+echarts-china-cities-pypkg==0.0.8
+

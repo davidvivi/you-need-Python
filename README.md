@@ -42,3 +42,26 @@ import os
 >>>python3 hero.py
 ```
 
+##### 2、Lagou `Python拉钩数据采集与可视化`
+
+* 注意项-wordcloud的安装:
+
+```python
+==== Installation of wordcloud package ====
+download wordcloud‑1.3.2‑cp36‑cp36m‑win_amd64.whl from http://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud
+Copy the file to your current working directory
+Open command prompt from Tools
+python -m pip install wordcloud-1.3.2-cp36-cp36m-win_amd64.whl
+```
+
+* 拉钩数据采集:
+
+```python
+# 如果你的依赖已经安全完成并且具备运行条件,可以直接在Lagou下运行lagou.py
+>>>python3 hero.py
+```
+* 数据可视化:
+
+```python
+>>>python3 data_analysis.py
+```
