@@ -65,3 +65,15 @@ python -m pip install wordcloud-1.3.2-cp36-cp36m-win_amd64.whl
 ```python
 >>>python3 data_analysis.py
 ```
+
+
+##### 3、scrapy_doubanmovie `scrapy学习爬取豆瓣电影`
+
+* 注意项-scrapy的安装:
+
+```python
+==== Installation of scrapy package ====
+利用whl文件安装，先安装Twisted再安装Scrapy
+pip install Twisted-18.9.0-cp36-cp36m-win_amd64.whl
+pip install Scrapy-1.5.1-py2.py3-none-any.whl
+```
