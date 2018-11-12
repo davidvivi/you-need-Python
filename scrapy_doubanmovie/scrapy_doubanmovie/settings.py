@@ -17,6 +17,8 @@ NEWSPIDER_MODULE = 'scrapy_doubanmovie.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'scrapy_doubanmovie (+http://www.yourdomain.com)'
+# 提示403,这是因为服务器判断出爬虫程序,设置user_agent即可
+USER_AGENT = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
