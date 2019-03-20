@@ -13,9 +13,8 @@ class ScrapyDoubanmovieItem(scrapy.Item):
     # name = scrapy.Field()
 
     sequence = scrapy.Field()
-    name = scrapy.Field()
-    introduce = scrapy.Field()
-    star = scrapy.Field()
-    name = scrapy.Field()
-    evaluate = scrapy.Field()
-    quote = scrapy.Field()
+    title = scrapy.Field()  # 电影名字
+    introduce = scrapy.Field()  # 电影介绍
+    star = scrapy.Field()  # 电影星级
+    evaluate = scrapy.Field()  # 电影评价人数
+    quote = scrapy.Field()  # 电影中脍炙人口的一句话

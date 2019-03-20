@@ -78,7 +78,7 @@ pip install Twisted-18.9.0-cp36-cp36m-win_amd64.whl
 pip install Scrapy-1.5.1-py2.py3-none-any.whl
 ```
 
-![](./scrapy_doubanmovie/img/scrapy.png)
+![](scrapy_doubanmovie/img/scrapy.png)
 
 
 * Scrapy组件
@@ -97,3 +97,11 @@ pip install Scrapy-1.5.1-py2.py3-none-any.whl
     4. 爬虫解析Response
     5. 解析出实体（Item）,则交给实体管道进行进一步的处理
     6. 解析出的是链接（URL）,则把URL交给调度器等待抓取
+    
+* pylint在pycharm中的使用
+    1. 安装pylint
+        pip install pylint
+
+    2. 配置pylint
+    pycharm --settings--Tools--External Tools，新建
+    ![](scrapy_doubanmovie/img/pylint_pycharm.png)

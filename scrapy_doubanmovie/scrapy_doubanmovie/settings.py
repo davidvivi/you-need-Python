@@ -11,8 +11,8 @@
 
 BOT_NAME = 'scrapy_doubanmovie'
 
-SPIDER_MODULES = ['scrapy_doubanmovie.spiders']
-NEWSPIDER_MODULE = 'scrapy_doubanmovie.spiders'
+SPIDER_MODULES = ['scrapy_doubanmovie.scrapy_doubanmovie.spiders']
+NEWSPIDER_MODULE = 'scrapy_doubanmovie.scrapy_doubanmovie.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
