@@ -90,3 +90,13 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+MYSQL_HOST = 'localhost'  # 数据库地址
+MYSQL_DBNAME = 'test'  # 数据库名字
+MYSQL_USER = 'root'  # 数据库登录名
+MYSQL_PASSWD = 'root'  # 数据库登录密码
+
+# 数据传输
+ITEM_PIPELINES = {
+    'scrapy_doubanmovie.scrapy_doubanmovie.pipelines.ScrapyDoubanmoviePipeline': 301,
+}
