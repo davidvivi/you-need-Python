@@ -91,12 +91,20 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+
 MYSQL_HOST = 'localhost'  # 数据库地址
 MYSQL_DBNAME = 'test'  # 数据库名字
 MYSQL_USER = 'root'  # 数据库登录名
 MYSQL_PASSWD = 'root'  # 数据库登录密码
 
+POSTGRESQL_HOST = 'localhost'
+POSTGRESQL_DBNAME= 'scrapy'
+POSTGRESQL_USER = 'postgres'
+POSTGRESQL_PASSWORD = '123456'
+POSTGRESQL_PORT = '5432'
+
 # 数据传输
 ITEM_PIPELINES = {
-    'scrapy_doubanmovie.scrapy_doubanmovie.pipelines.ScrapyDoubanmoviePipeline': 301,
+    'scrapy_doubanmovie.scrapy_doubanmovie.pipelines.ScrapyDoubanMysqlPipeline': 301,
+    'scrapy_doubanmovie.scrapy_doubanmovie.pipelines.ScrapyDoubanPostgresqlPipeline': 302,
 }
