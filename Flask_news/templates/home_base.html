@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-3.3.7-dist/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='jquery.dataTables.min.css')}}">
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.3.1.min.js')}}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+    {% block head %}
+    <title>首页</title>
+    {% endblock %}
 </head>
 <body>
+<div class="container">
+    <h1>新闻列表</h1>
+    <nav class="navbar navbar-inverse">
+        <!-- 页面头部 -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
+        </div>
+        <div id="navbar-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">首页</a></li>
+                <li><a href="{{url_for('cat', name='推荐')}}">推荐</a></li>
+                <li><a href="{{url_for('cat', name='百家')}}">百家</a></li>
+                <li><a href="{{url_for('cat', name='本地')}}">本地</a></li>
+                <li><a href="{{url_for('cat', name='图片')}}">图片</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 新闻内容部分 -->
+    {% block content %}
+    <!-- 内容区域 -->
+    {% endblock %}
+
+</div>
+{% block extrajs %}
+<!-- 其他脚本 -->
+{% endblock %}
 </body>
 </html>

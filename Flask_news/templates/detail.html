@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>新闻的详情页</title>
-</head>
-<body>
-    新闻详情页>{{pk}}
+{% extends 'home_base.html' %}
+{% block head %}
+<title>新闻详情</title>
+{% endblock %}
+{% block content%}
+<div id="content" class="row-fluid">
+    <div class="col-md-9">
+        <h2>新闻详情，来自新闻id> {{obj.id}}</h2>
+    </div>
+
+    <div class="col-md-12">
+        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th>{{ obj.content }}</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>
+                    <img width=600 height=500 src="{{ obj.image }}" alt="图片">
+                </td>
+                <td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>
+                        {{ obj.title }}
+                        <small>{{ obj.created_at }}</small>
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+{% endblock %}
 </body>
 </html>

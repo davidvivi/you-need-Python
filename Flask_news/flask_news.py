@@ -54,8 +54,8 @@ def cat(name):
 @app.route('/detail/<int:pk>/')
 def detail(pk):
     """新闻详情信息"""
-    new_obj = News.query.get(pk)
-    return render_template('detail.html', new_obj=new_obj)
+    obj = News.query.get(pk)
+    return render_template('detail.html', obj=obj)
 
 
 if __name__ == '__main__':

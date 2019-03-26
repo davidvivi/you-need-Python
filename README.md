@@ -105,3 +105,17 @@ pip install Scrapy-1.5.1-py2.py3-none-any.whl
     2. 配置pylint
     pycharm --settings--Tools--External Tools，新建
     ![](scrapy_doubanmovie/img/pylint_pycharm.png)
+    
+##### 4、Flask_news `Flask的简单demo`
+
+* 注意项-flask的安装:
+```python
+==== Installation of flask package ====
+pip install flask
+pip install pip install Flask-SQLAlchemy
+```
+
+* 创建数据表:
+```python
+>>>python3 create_table.py
+```
