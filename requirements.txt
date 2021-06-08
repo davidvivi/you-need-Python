@@ -37,7 +37,7 @@ mpmath==1.0.0
 numpy==1.14.5
 pandas==0.23.0
 parsel==1.5.1
-Pillow==5.1.0
+Pillow==8.2.0
 pyasn1==0.4.4
 pyasn1-modules==0.2.2
 pycparser==2.19
